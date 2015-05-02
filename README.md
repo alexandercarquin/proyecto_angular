@@ -10,7 +10,7 @@ npm install lazabogdan/npm-install-from
 
 ### Run
 ```
-node_modules/.bin/npm-install-from --from some/relative/path/
+node_modules/.bin/npm-install-from --path some/relative/path/
 ```
 Where **some/relative/path** is a relative path to a directory that contains the package.json you want to install dependencies from.
 
