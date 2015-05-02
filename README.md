@@ -19,4 +19,4 @@ I use this module with projects that benefit from multiple task runner workflows
 
 So, instead of adding all of the grunt/gulp workflows dependencies to the project's package.json, I actually keep separate package.json files for each workflow, one for grunt and one for gulp. 
 
-Then, if I'd like to use the gulp workflow, I can simply run `npm-install-from --path path/to/gulp-workflow/package.json` and my colleagues who prefer grunt can use grunt instead of gulp, without having to also install tons of dependencies required by the gulp workflow.
+Then, if I'd like to use the gulp workflow, I can simply run `npm-install-from --path path/to/gulp-workflow/directory/` and my colleagues who prefer grunt can use grunt instead of gulp, without having to also install tons of dependencies required by the gulp workflow.
