@@ -1,0 +1,16 @@
+{
+	"name": "npm-install-from",
+	"version": "0.1.0",
+	"description": "Install dependencies from an external package.json into the current directory.",
+	"author": "lazabogdan",
+	"license": "MIT",
+	"bin": {
+		"npm-install-from": "./bin/npm-install-from"
+	},
+	"dependencies": {
+		"async": "^0.9.0",
+		"npm": "^2.9.0",
+		"npmi": "^1.0.1",
+		"minimist": "^1.1.1"
+	}
+}
