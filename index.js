@@ -11,7 +11,8 @@ function NpmInstallFrom(options) {
     options = options || {};
     var opts = {
         path: '.',
-        cleanup: true
+        cleanup: true,
+        forceInstall: true
     };
     extend(true, opts, options);
     this.options = opts;
@@ -39,7 +40,7 @@ NpmInstallFrom.prototype.installModule = function (module, cb) {
         name: module[ 0 ],
         version: module[ 1 ],
         path: '.',
-        forceInstall: false,
+        forceInstall: this.options.forceInstall,
         npmLoad: {
             loglevel: 'silent'
         }
@@ -63,7 +64,7 @@ NpmInstallFrom.prototype.init = function (cb) {
     var inst = this;
     this.getMissing(function (data) {
         if (data.length > 0) {
-            async.map(data, inst.installModule, function (err, result) {
+            async.map(data, inst.installModule.bind(inst), function (err, result) {
                 result.forEach(function (module) {
                     msg.push(module[ 0 ] + "@" + module[ 1 ]);
                 });

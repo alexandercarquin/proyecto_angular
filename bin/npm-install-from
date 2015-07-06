@@ -6,7 +6,8 @@ var knownOptions = {
     boolean: [ 'cleanup' ],
     default: {
         path: '.',
-        cleanup: true
+        cleanup: true,
+        forceInstall: true
     }
 };
 var options = minimist(process.argv.slice(2), knownOptions);
